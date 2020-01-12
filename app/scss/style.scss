@@ -2,7 +2,7 @@
 @import "vars";
 @import "fonts";
 @import "anim";
-// @import "media";
+
 
 .header {
   background-color: #34495e;
@@ -110,6 +110,9 @@
   justify-content: space-between;
   min-height: 105px;
   align-items: center;
+}
+.menu-btn{
+  display: none;
 }
 .header__menu {
   &-list {
@@ -380,6 +383,14 @@
   border-radius: 50%;
   position: relative;
   box-shadow: inset -25px -27px 0 rgba(0, 0, 0, 0.13);
+  transition: 2s;
+  &:hover{
+    &::before{
+      animation-name: anim-racet;
+      animation-duration: 2s;
+      animation-fill-mode: forwards;
+    }
+  }
   &::before {
     content: "";
     position: absolute;
@@ -791,3 +802,4 @@
   color: #758594;
   font-size: 12px;
 }
+@import "media";
